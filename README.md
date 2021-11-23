@@ -1,21 +1,19 @@
 # urReview
 
-GROUP PROJECT 2 - Full Stack Application
+## GROUP PROJECT 2 - Full Stack Application
 
 ![License](https://img.shields.io/badge/LICENSE-MIT-BLUE)
-![example workflow](https://img.shields.io/github/languages/top/gugacorchog/Team-Profile-Generator?color=red)
-![example workflow](https://img.shields.io/github/languages/code-size/gugacorchog/Team-Profile-Generator?color=yellow)
+![Languages](https://img.shields.io/github/languages/top/CPetrevski/urReview?color=red)
+![Size](https://img.shields.io/github/repo-size/CPetrevski/urReview?color=yellow)
 
 
-#  ** TEAM PROFILE GENERATOR **
+#  ** URL Link  **
     
-# URL Link    
-
-
+ 
 ### Demo
 
 
-https://user-images.githubusercontent.com/87793995/140643415-e1e40c14-0d28-44ba-a204-6d26fa2fbf6f.mov
+
 
 
 Screenshot:
@@ -28,13 +26,17 @@ Screenshot:
 
 ## Description 
 
-
+THE user first need to singn up
+AND login to acess the list of Movies Reviews
+THE user will be able to see the other users Reviews
+AND like or dislike the previus Reviews
+THE user can ADD NEW Reviews and Delete just your own Reviews
 
 
 ## Table of Contents 
 
 - [Installation](#installation)
-- [Usage](#usage)
+- [Technologies](#Technologies)
 - [Contributing](#contributing)
 - [Test](#test)
 - [Question](#question) 
@@ -45,30 +47,28 @@ Screenshot:
 Npm init -y
 
 Npm install inquirer (package Json)
+express.js
+handlebars.js
+mysql2
+express-session
 
+## Technologies
 
-## Usage
-
-Run the following command at the root of your project and answer the prompted questions:
-node index.js 
-WHEN you see message DONE
-A html page will be created in the folder team/teamList.html 
+node.js
+express.js
+handlebars.js
+mysql
+ORM 
 
 ## Contributing
-
+Chris Petrevski 
+Gustavo Corchog 
+Shao Tangyen
 
 ## Test
 #### Demo
 
 
-
-https://user-images.githubusercontent.com/87793995/140596521-e1a3c5b3-6bdf-4438-b00e-f0026664d0a1.mov
-
-
-
-Open the termminal in the package.js and run the command:
-
-Npm run test 
 
 ## Question
 Questions? Let us know:  [gugacorchog@gmail.com]
