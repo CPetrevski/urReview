@@ -1,0 +1,21 @@
+{
+  "name": "urReview",
+  "version": "1.0.0",
+  "description": "GROUP PROJECT 2 - Full Stack Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CPetrevski/urReview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CPetrevski/urReview/issues"
+  },
+  "homepage": "https://github.com/CPetrevski/urReview#readme"
+}
