@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS urReview_db;
+CREATE DATABASE urReview_db;

@@ -13,9 +13,6 @@
 ### Demo
 
 
-
-
-
 Screenshot:
 
 ![screenshot]()
@@ -26,11 +23,11 @@ Screenshot:
 
 ## Description 
 
-THE user first need to singn up
-AND login to acess the list of Movies Reviews
-THE user will be able to see the other users Reviews
-AND like or dislike the previus Reviews
-THE user can ADD NEW Reviews and Delete just your own Reviews
+#### THE user first need to singn up
+#### AND login to acess the list of Movies Reviews
+#### THE user will be able to see the other users Reviews
+#### AND like or dislike the previus Reviews
+#### THE user can ADD NEW Reviews and Delete just your own Reviews
 
 
 ## Table of Contents 
@@ -44,26 +41,24 @@ THE user can ADD NEW Reviews and Delete just your own Reviews
 
 ## Installation
 
-Npm init -y
+#### Npm i
+#### express.js
+#### handlebars.js
+#### mysql2
 
-Npm install inquirer (package Json)
-express.js
-handlebars.js
-mysql2
-express-session
 
 ## Technologies
 
-node.js
-express.js
-handlebars.js
-mysql
-ORM 
+#### node.js
+#### express.js
+#### handlebars.js
+#### mysql
+#### ORM 
 
 ## Contributing
-Chris Petrevski 
-Gustavo Corchog 
-Shao Tangyen
+##### Chris Petrevski 
+##### Gustavo Corchog 
+##### Shao Tangyen
 
 ## Test
 #### Demo
