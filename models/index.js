@@ -11,7 +11,7 @@ Review.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Movie.belongsTo(Review, {
+Review.belongsTo(Movie, {
   foreignKey: 'movie_id'
 });
 
