@@ -11,6 +11,10 @@ Movie.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    poster: {
+      type:DataTypes.STRING,
+      allowNull: false,
+    },
     movie_title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -27,7 +31,7 @@ Movie.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'movie',
   }
 );
 

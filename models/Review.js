@@ -11,6 +11,14 @@ Review.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    movie_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'movie',
+        key: 'id',
+      },
+    },
     review: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -38,7 +46,7 @@ Review.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'review',
   }
 );
 
