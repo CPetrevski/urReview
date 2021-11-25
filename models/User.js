@@ -35,10 +35,6 @@ User.init(
         len: [8],
       },
     },
-    review_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
   },
   {
     hooks: {
