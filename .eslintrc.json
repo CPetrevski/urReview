@@ -4,9 +4,10 @@
       "browser": true,
       "commonjs": true,
       "node": true,
-      "es6": true,
-      // Add support for ES7 features like ** operators
-      "es2017": true
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
     },
     "rules": {
       // Don't allow assigning variables to undefined
