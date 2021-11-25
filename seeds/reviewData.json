@@ -1,0 +1,12 @@
+[
+    {
+        "review": "I love it!",
+        "date_created": "10 October 2020",
+        "likes": 20
+    },
+    {
+        "review": "It's an amazing series.",
+        "date_created": "20 May 2020",
+        "likes": 563
+    }
+]
