@@ -1,4 +1,4 @@
-   
+  
 @import url('https://fonts.googleapis.com/css?family=Mukta');
 body{
   font-family: 'Mukta', sans-serif;
@@ -41,7 +41,8 @@ a{
     display:none;
 }
 .login-reg-panel{
-    color:#B8B8B8;
+    color: white;
+    margin-top:300px;
 }
 .login-reg-panel #label-login, 
 .login-reg-panel #label-register{
@@ -152,5 +153,17 @@ a{
   color:#2c7715;
 }
     
+#logout {
+    max-width: 101px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+}
     
     
