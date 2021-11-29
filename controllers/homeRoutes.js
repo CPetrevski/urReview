@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 // See a movie and it's reviews and comments at the /movie/id page
 router.get('/movie/:id', async (req, res) => {
   try {
-    const movieData = await Article.findByPk(req.params.id, {
+    const movieData = await Movie.findByPk(req.params.id, {
       include: [
         {
           model: Review
@@ -41,10 +41,32 @@ router.get('/movie/:id', async (req, res) => {
     });
 
     const movie = movieData.get({ plain: true });
-    //console.log(JSON.stringify({ article }, null, 2)); 
+    console.log(JSON.stringify({ movieData }, null, 2)); 
 
     res.render('movie', {
       ...movie,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/review/:id/edit', async (req, res) => {
+  try {
+    const reviewData = await Review.findByPk(req.params.id, {
+      include: [
+        {
+          model: User
+        },
+      ],
+    });
+    const review = reviewData.get({ plain: true });
+    //console.log(JSON.stringify({ review }, null, 2));
+
+    res.render('editReview', {
+      ...review,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -52,29 +74,46 @@ router.get('/movie/:id', async (req, res) => {
   }
 });
 
-// router.get('/article/:id/edit', async (req, res) => {
-//   try {
-//     const articleData = await Article.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User
-//         },
-//       ],
-//     });
-//     const article = articleData.get({ plain: true });
-//     //console.log(JSON.stringify({ article }, null, 2));
-//     res.render('editArticle', {
-//       ...article,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+router.get('/dashboard', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Review }, {model:Movie}],
+    });
 
+    //console.log(JSON.stringify({ userData }, null, 2));
+    const user = userData.get({ plain: true });
+
+    res.render('dashboard', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/');
+    console.log("already logged in");
+    return;
+  }
+
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/');
+    console.log("already logged in");
+    return;
+  }
+
+  res.render('signup');
 });
 
 module.exports = router;
