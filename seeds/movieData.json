@@ -1,14 +1,14 @@
 [
     {
+        "poster": "./assets/thematrix.jpg",
         "movie_title": "The Matrix",
         "description": "The Matrix is a 1999 science fiction action film written and directed by the Wachowskis. It is the first installment in The Matrix film series, starring Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano. It depicts a dystopian future in which humanity is unknowingly trapped inside a simulated reality, the Matrix, which intelligent machines have created to distract humans while using their bodies as an energy source.",
-        "banner_url": "./assets/thematrix.jpg",
         "data_released": "24 March 1999"
     },
     {
+        "poster": "./assets/squidgame.jpg",
         "movie_title": "Squid Game",
         "description": "Squid Game (Korean: 오징어 게임; RR: Ojing-eo Geim) is a South Korean survival drama streaming television series created by Hwang Dong-hyuk for Netflix. Its cast includes Lee Jung-jae, Park Hae-soo, Wi Ha-joon, Jung Ho-yeon, O Yeong-su, Heo Sung-tae, Anupam Tripathi, and Kim Joo-ryoung. The series revolves around a contest where 456 players, all of whom are in deep financial debt, risk their lives to play a series of deadly children's games for the chance to win a ₩45.6 billion prize.",
-        "banner_url": "./assets/squidgame.jpg",
         "data_released": "17 September 2021"
     }
 ]

@@ -12,16 +12,8 @@ Review.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    movie_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'movie',
-        key: 'id',
-      },
-    },
     review: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     date_created: {
@@ -31,8 +23,14 @@ Review.init(
     },
     likes: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       defaultValue: 0,
+    },
+    movie_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'movie',
+        key: 'id',
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
