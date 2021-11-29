@@ -1,20 +1,20 @@
 const router = require('express').Router();
 const { User, Movie, Review } = require('../../models');
 
-router.get('/', async (req, res) => {
-    try {
-        const reviewData = await Review.findAll();
+// router.get('/', async (req, res) => {
+//     try {
+//         const reviewData = await Review.findAll();
 
-        if (!reviewData) {
-            res.status(404).json({ message: 'No reviews found!' });
-            return;
-        }
+//         if (!reviewData) {
+//             res.status(404).json({ message: 'No reviews found!' });
+//             return;
+//         }
 
-        res.status(200).json(reviewData);
-    } catch (err) {
-        res.status(400).json(err);
-    }
-});
+//         res.status(200).json(reviewData);
+//     } catch (err) {
+//         res.status(400).json(err);
+//     }
+// });
 
 router.get('/:id', async (req, res) => {
     try {
