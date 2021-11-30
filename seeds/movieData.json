@@ -1,50 +1,104 @@
 [
     {
-        "poster": "./assets/moviePosters/noTimeToDie.png",
+        "poster": "/assets/moviePosters/noTimeToDie.png",
         "movie_title": "No Time to Die",
         "description": "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
         "date_released": "8 October 2021"
     },
     {
-        "poster": "../assets/moviePosters/squidGame.png",
+        "poster": "/assets/moviePosters/squidGame.png",
         "movie_title": "Squid Game",
         "description": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes. A survival game that has a whopping 45.6 billion-won prize at stake.",
         "date_released": "17 September 2021"
     },
     {
-        "poster": "../assets/moviePosters/venom2.png",
+        "poster": "/assets/moviePosters/venom2.png",
         "movie_title": "Venom 2",
         "description": "Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.",
         "date_released": "17 September 2021"
     },
     {
-        "poster": "../assets/moviePosters/eternals.png",
+        "poster": "/assets/moviePosters/eternals.png",
         "movie_title": "Eternals",
         "description": "The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.",
         "date_released": "5 November 2021"
     },
     {
-        "poster": "../assets/moviePosters/shangChi.png",
+        "poster": "/assets/moviePosters/shangChi.png",
         "movie_title": "Shang Chi",
         "description": "Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
         "date_released": "3 September 2021"
     },
     {
-        "poster": "../assets/moviePosters/halloweenKills.png",
+        "poster": "/assets/moviePosters/halloweenKills.png",
         "movie_title": "Halloween Kills",
         "description": "The saga of Michael Myers and Laurie Strode continues in the next thrilling chapter of the Halloween series.",
         "date_released": "15 October 2021"
     },
     {
-        "poster": "../assets/moviePosters/freeGuy.png",
+        "poster": "/assets/moviePosters/freeGuy.png",
         "movie_title": "Free Guy",
         "description": "A bank teller discovers that he's actually an NPC inside a brutal, open world video game.",
         "date_released": "13 August 2021"
     },
     {
-        "poster": "../assets/moviePosters/cowboyBeepop.png",
+        "poster": "/assets/moviePosters/cowboyBeepop.png",
         "movie_title": "Cowboy Beepop",
         "description": "A ragtag crew of bounty hunters chases down the galaxy's most dangerous criminals. They'll save the world - for the right price.",
+        "date_released": "19 November 2021"
+    },
+    {
+        "poster": "/assets/moviePosters/theSuicideSquad.png",
+        "movie_title": "The Suicide Squad",
+        "description": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+        "date_released": "6 August 2021"
+    },
+    {
+        "poster": "/assets/moviePosters/redNotice.png",
+        "movie_title": "Red notice",
+        "description": "An Interpol agent tracks the world's most wanted art thief. Starring Gal Gadot, Ryan Reynolds and Dwane Johnson",
+        "date_released": "5 November 2021"
+    },
+    {
+        "poster": "/assets/moviePosters/tenet.png",
+        "movie_title": "Tenet",
+        "description": "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+        "date_released": "3 September 2020"
+    },
+    {
+        "poster": "/assets/moviePosters/theMandalorian.png",
+        "movie_title": "The Mandalorian",
+        "description": "The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.",
+        "date_released": "12 November 2019"
+    },
+    {
+        "poster": "/assets/moviePosters/godzillaVsKong.png",
+        "movie_title": "Godzilla vs Kong",
+        "description": "The epic next chapter in the cinematic Monsterverse pits two of the greatest icons in motion picture history against one another - the fearsome Godzilla and the mighty Kong - with humanity caught in the balance.",
+        "date_released": "31 March 2021"
+    },
+    {
+        "poster": "/assets/moviePosters/narcosMexico.png",
+        "movie_title": "Narcos Mexico",
+        "description": "The rise of the Guadalajara Cartel as an American DEA agent learns the danger of targeting narcos in Mexico.",
+        "date_released": "16 November 2018"
+    },
+    {
+        "poster": "/assets/moviePosters/blackWidow.png",
+        "movie_title": "Black Widow",
+        "description": "Natasha Romanoff confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises.",
+        "date_released": "9 July 2021"
+    },
+    {
+        "poster": "/assets/moviePosters/hellbound.png",
+        "movie_title": "Hellbound",
+        "description": "People hear predictions on when they will die. When that time comes, a death angel appears in front of them and kills them.",
+        "date_released": "19 November 2021"
+    },
+    {
+        "poster": "/assets/moviePosters/hellbound.png",
+        "movie_title": "Hellbound",
+        "description": "People hear predictions on when they will die. When that time comes, a death angel appears in front of them and kills them.",
         "date_released": "19 November 2021"
     }
 ]
