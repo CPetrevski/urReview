@@ -8,6 +8,30 @@
     {
         "review": "It's an amazing series.",
         "likes": 563,
+        "movie_id":1,
+        "user_id":2
+    },
+    {
+        "review": "I love it!",
+        "likes": 20,
+        "movie_id":3,
+        "user_id":3
+    },
+    {
+        "review": "It's an amazing series.",
+        "likes": 563,
+        "movie_id":2,
+        "user_id":4
+    },
+    {
+        "review": "I love it!",
+        "likes": 20,
+        "movie_id":3,
+        "user_id":1
+    },
+    {
+        "review": "It's an amazing series.",
+        "likes": 563,
         "movie_id":2,
         "user_id":2
     }

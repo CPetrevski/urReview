@@ -3,7 +3,6 @@ $(document).ready(function(){
     $('.login-show').addClass('show-log-panel');
 });
 
-
 $('.login-reg-panel input[type="radio"]').on('change', function() {
     if($('#log-login-show').is(':checked')) {
         $('.register-info-box').fadeOut(); 

@@ -62,8 +62,9 @@ router.get('/review/:id/edit', async (req, res) => {
         },
       ],
     });
+    console.log(JSON.stringify({ reviewData }, null, 2));
     const review = reviewData.get({ plain: true });
-    //console.log(JSON.stringify({ review }, null, 2));
+    
 
     res.render('editReview', {
       ...review,
@@ -82,7 +83,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       include: [{ model: Review }, {model:Movie}],
     });
 
-    //console.log(JSON.stringify({ userData }, null, 2));
+    console.log(JSON.stringify({ userData }, null, 2));
     const user = userData.get({ plain: true });
 
     res.render('dashboard', {
