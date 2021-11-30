@@ -166,4 +166,11 @@ a{
     cursor: pointer;
 }
     
-    
+/* .moviePoster {
+    display: flex;
+    flex: 0 0 75%;
+    flex-flow: row wrap;
+    background-color: black;
+    position: relative;
+    align-items: center;
+}    */
