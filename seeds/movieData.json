@@ -10,5 +10,11 @@
         "movie_title": "Squid Game",
         "description": "Squid Game is a South Korean survival drama streaming television series created by Hwang Dong-hyuk for Netflix.",
         "date_released": "17 September 2021"
+    },
+    {
+        "poster": "./assets/shangchi.jpg",
+        "movie_title": "Shang Chi",
+        "description": "Shang-Chi and the Legend of the Ten Rings is a 2021 American superhero film based on Marvel Comics featuring the character Shang-Chi.",
+        "date_released": "September 2021"
     }
 ]
