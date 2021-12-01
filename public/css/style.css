@@ -1,5 +1,11 @@
-  
 @import url('https://fonts.googleapis.com/css?family=Mukta');
+
+:root {
+    --main-bg-color: #202122ff;
+    --main-nav-color: #595959ff;
+    --main-yellow-color:#f1c232;
+  }
+
 body{
   font-family: 'Mukta', sans-serif;
 	height:100vh;
@@ -16,14 +22,13 @@ a{
 }
 .login-reg-panel{
     position: relative;
-    /* top: 50%;
-    transform: translateY(-50%); */
 	text-align:center;
     width:70%;
 	right:0;left:0;
     margin:auto;
     height:400px;
-    background-color: rgba(236, 48, 20, 0.9);
+    background-color: var(--main-yellow-color);
+    color: var(--main-bg-color);
 }
 .white-panel{
     background-color: rgba(255,255, 255, 1);
@@ -39,10 +44,6 @@ a{
 .login-reg-panel input[type="radio"]{
     position:relative;
     display:none;
-}
-.login-reg-panel{
-    color: white;
-    margin-top:130px;
 }
 .login-reg-panel #label-login, 
 .login-reg-panel #label-register{
@@ -167,7 +168,15 @@ a{
 } */
        
 .color-primary{
-    color: #f1c232;
+    color: var(--main-yellow-color);
+}
+
+.nav-bg-color{
+    background-color: var(--main-nav-color);
+}
+
+.main-bg-color{
+    background-color: var(--main-bg-color);
 }
 
 .font-bold {
@@ -183,4 +192,7 @@ a{
     text-decoration: none;
     font-size: 100%;
   }
-  
+
+  .pt-15{
+      padding-top: 15%;
+  }
