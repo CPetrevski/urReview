@@ -4,6 +4,7 @@ body{
   font-family: 'Mukta', sans-serif;
 	height:100vh;
 	min-height:550px;
+    background-color: #1E1E1E;
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position:center;
@@ -182,8 +183,4 @@ a{
     text-decoration: none;
     font-size: 100%;
   }
-<<<<<<< HEAD
   
-=======
-  
->>>>>>> 50d9dce1500b535530a43323c831e08e8733df43
