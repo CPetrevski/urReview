@@ -94,6 +94,57 @@
         "movie_title": "Hellbound",
         "description": "People hear predictions on when they will die. When that time comes, a death angel appears in front of them and kills them.",
         "date_released": "19 November 2021"
+<<<<<<< HEAD
+=======
+    },
+    {
+        "poster": "/assets/moviePosters/zackSnydersJusticeLeague.png",
+        "movie_title": "Zack Snyder's Justice League",
+        "description": "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+        "date_released": "18 March 2021"
+    },
+    {
+        "poster": "/assets/moviePosters/extraction.png",
+        "movie_title": "Extraction",
+        "description": "Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord.",
+        "date_released": "24 April 2020"
+    },
+    {
+        "poster": "/assets/moviePosters/monsterHunter.png",
+        "movie_title": "Monster Hunter",
+        "description": "When Cpt. Artemis and her loyal soldiers are transported to a new world, they engage in a desperate battle for survival against enormous enemies with incredible powers. Feature film based on the video game by Capcom.",
+        "date_released": "18 December 2020"
+    },
+    {
+        "poster": "/assets/moviePosters/wonderWoman1984.png",
+        "movie_title": "Wonder Woman 1984",
+        "description": "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing",
+        "date_released": "25 December 2020"
+    },
+    {
+        "poster": "/assets/moviePosters/johnWick3.png",
+        "movie_title": "John Wick 3",
+        "description": "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
+        "date_released": "9 May 2019"
+    },
+    {
+        "poster": "/assets/moviePosters/theLittleThings.png",
+        "movie_title": "The Little Things",
+        "description": "Kern County Deputy Sheriff Joe Deacon is sent to Los Angeles for what should have been a quick evidence-gathering assignment. Instead, he becomes embroiled in the search for a serial killer who is terrorizing the city",
+        "date_released": "29 January 2021"
+    },
+    {
+        "poster": "/assets/moviePosters/thePhenomenon.png",
+        "movie_title": "The Phenomenon",
+        "description": "This documentary examines unidentified aerial phenomenon. With testimony from high-ranking government officials, and NASA Astronauts, Senator Harry Reid says it 'makes the incredible credible.'",
+        "date_released": "6 October 2020"
+    },
+    {
+        "poster": "/assets/moviePosters/unhinged.png",
+        "movie_title": "Unhinged",
+        "description": "After a confrontation with an unstable man at an intersection, a woman becomes the target of his rage.",
+        "date_released": "21 August 2020"
+>>>>>>> 50d9dce1500b535530a43323c831e08e8733df43
     }
    
 ]
