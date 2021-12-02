@@ -198,11 +198,16 @@ a{
 }
 
 .movie-card{
-    height:600px;
+    height:50vh;
 }
 
-.movie-card img{
+.movie-img{
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+.homepage-movie-img{
+    height: 100%;
+    width: 100%;
 }
