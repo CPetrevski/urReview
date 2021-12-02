@@ -10,11 +10,11 @@ body{
   font-family: 'Mukta', sans-serif;
 	height:100vh;
 	min-height:550px;
-    background-color: #1E1E1E;
-	background-repeat: no-repeat;
+    background-color: var(--main-bg-color);
+	/* background-repeat: no-repeat;
 	background-size:cover;
-	background-position:center;
-	position:relative;
+	background-position:center; 
+	position:relative;*/
 }
 a{
   text-decoration:none;
@@ -191,8 +191,18 @@ a{
     color: #0d6efd;
     text-decoration: none;
     font-size: 100%;
-  }
+}
 
-  .pt-15{
-      padding-top: 15%;
-  }
+.pt-15{
+    padding-top: 15%;
+}
+
+.movie-card{
+    height:600px;
+}
+
+.movie-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
