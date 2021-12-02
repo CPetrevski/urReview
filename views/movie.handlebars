@@ -1,16 +1,23 @@
 <div class="container">
     <div class="row">
-        <div class="movie-card">
+        <div class="movie-card py-3">
             <img src="{{poster}}" class="movie-img" alt="...">
         </div>
         <h1 class="text-white py-4">{{movie_title}}</h1>
         <h4 class="text-white">{{description}}</h4>
-        <button>Write a review</button>
+        <div class="text-center">
+            <button class="btn btn-primary" id="review_id" value="{{id}}" type="submit">Post a Review</button>
+        </div>
     </div>
     <div class="row">
-        <h1>Review</h1>
-        <div>
-            
+        <h1 class="text-white">Review</h1>
+        {{#each reviews as |review| }}
+        <div class="text-white">
+            REVIEW: {{review.review}}<br>
+            DATE: {{format_date review.date_created}}<br>
+            BY: {{review.user.name}}<br>
+            <hr>
         </div>
+        {{/each}}
     </div>
 </div>
