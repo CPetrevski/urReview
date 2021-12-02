@@ -1,15 +1,40 @@
 <!-- Loop over each object in the projects array -->
 {{#each movies as |movie| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-4">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/movie/{{movie.id}}">{{movie.movie_title}}</a>
+      <a href="/movie/{{movie.id}}"></a>
     </h2>
-    <p>
-      <img class="moviePoster" src="{{movie.poster}}">
-    </p>  
+    {{!-- Start card --}}
+    {{!-- <div class="col-md-4 col-sm-4">
+        <div class="card thumbnail">
+        <img class="moviePoster" src="{{movie.poster}}">
+       </div>
+      </div> --}}
+    {{!-- Card end  --}}
+    
+    </div>
   </div>
 </div>
+
+<div class="card-group mx-auto text-center" style="width: 35rem;">
+  <div class="card">
+    <img class="card-img-top" src="{{movie.poster}}" alt="Card image cap">
+    <div class="card-body text-white bg-dark">
+      <h5 class="card-title">Reviews</h5>
+      <p class="card-text">Test{{review.[0].likes}}</p>
+      <input class="signup-form" type="button" value="ADD Review">
+      <input class="signup-form" type="button" value="EDIT Review">
+      <br>
+      <br>
+      <p>
+      <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+      <i onclick="myFunction(this)" class="fa fa-thumbs-down"></i>
+      </p>
+    </div>
+  </div>
+
 {{/each}}
 

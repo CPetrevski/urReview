@@ -8,9 +8,10 @@ router.get('/', async (req, res) => {
     const movieData = await Movie.findAll(
       { include: [{ model: Review }] }
     );
+    // console.log (movieData)
     // console.log(JSON.stringify({ movieData }, null, 2)); //for testing
     const movies = movieData.map((movie) => movie.get({ plain: true }));
-
+    // console.log (movies) 
     res.render('homepage', {
       movies,
       logged_in: req.session.logged_in
