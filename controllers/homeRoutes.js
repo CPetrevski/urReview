@@ -42,7 +42,7 @@ router.get('/movie/:id', async (req, res) => {
     });
 
     const movie = movieData.get({ plain: true });
-    console.log(JSON.stringify({ movieData }, null, 2)); 
+    console.log(JSON.stringify({ movieData }, null, 2));
 
     res.render('movie', {
       ...movie,
@@ -78,14 +78,35 @@ router.get('/review/:id/edit', async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
+    //to get review data
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
 
+      include: [{ model: Review }],
+
       include: [{ model: Review, Movie}]
+
     });
 
     console.log(JSON.stringify({ userData }, null, 2));
     const user = userData.get({ plain: true });
+
+    //to get movie data
+    const reviewData = await Review.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      include: [{
+        model: Movie
+      }],
+    });
+
+    reviewData.forEach((item) => {
+      const review = item.get({ plain: true });
+      //TODO
+      // merge movie_title from review into the user object
+    }
+    );
 
     res.render('profile', {
       ...user,
