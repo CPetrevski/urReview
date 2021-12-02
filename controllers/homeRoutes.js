@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
       logged_in: req.session.logged_in
     });
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -66,7 +66,6 @@ router.get('/review/:id/edit', async (req, res) => {
     console.log(JSON.stringify({ reviewData }, null, 2));
     const review = reviewData.get({ plain: true });
 
-
     res.render('editReview', {
       ...review,
       logged_in: req.session.logged_in
@@ -82,7 +81,11 @@ router.get('/profile', withAuth, async (req, res) => {
     //to get review data
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
+
       include: [{ model: Review }],
+
+      include: [{ model: Review, Movie}]
+
     });
 
     console.log(JSON.stringify({ userData }, null, 2));
@@ -119,7 +122,7 @@ router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/');
-    console.log("already logged in");
+    console.log('already logged in');
     return;
   }
 
@@ -130,7 +133,7 @@ router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/');
-    console.log("already logged in");
+    console.log('already logged in');
     return;
   }
 
