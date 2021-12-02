@@ -1,9 +1,10 @@
-{{#if review.length}}
+{{#if reviews.length}}
   <section class="card">
     <div class="card-header">Your Reviews</div>
     <div class="post-body">
-      {{#each review}}        
+      {{#each reviews}}        
           <li>
+            <div>{{movie_title}}</div>
             <div>{{format_date date_created}}</div>
             <div>{{review}}</div>
           </li>        
