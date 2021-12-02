@@ -76,23 +76,24 @@ router.get('/review/:id/edit', async (req, res) => {
   }
 });
 
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Review }, {model:Movie}],
+      include: [{ model: Review, Movie}],
     });
 
     console.log(JSON.stringify({ userData }, null, 2));
     const user = userData.get({ plain: true });
 
-    res.render('dashboard', {
+    res.render('profile', {
       ...user,
       logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
+    console.log(err);
   }
 });
 
