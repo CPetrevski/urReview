@@ -35,6 +35,25 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+//edit a review
+router.put('/:id/like/', async (req, res) => {
+  try {
+    const reviewData = await Review.update(
+      {
+        likes: req.body.likes
+      },
+      {
+        where: {
+          id: req.params.id,
+        }
+      });
+
+    res.status(200).json(reviewData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // delete one review by its `id` value
 router.delete('/:id', async (req, res) => {
   try {
