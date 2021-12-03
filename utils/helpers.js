@@ -6,9 +6,11 @@ module.exports = {
     if (amount !== 1) {
       return `${word}s`;
     }
+
     return word;
   },
-  ifCond: function(v1, v2, options) {
+
+  ifCond: (v1, v2, options) => {
     if(v1 === v2) {
       return options.fn(this);
     }
