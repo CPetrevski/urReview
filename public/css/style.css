@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Mukta');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Rubik:wght@400;800&display=swap');
 
 :root {
     --main-bg-color: #202122ff;
     --main-nav-color: #595959ff;
     --main-yellow-color:#f1c232;
+    --main-yellow-bg-color: #ffd966ff;
   }
 
 body{
@@ -17,8 +18,11 @@ body{
 	position:relative;*/
 }
 a{
-  text-decoration:none;
-  color:#444444;
+    text-decoration:none;
+     color:var(--main-yellow-color); 
+}
+a:hover{
+    color:white;
 }
 .login-reg-panel{
     position: relative;
@@ -149,23 +153,6 @@ a{
     letter-spacing: 1px;
     z-index: 99;
 }
-a{
-  text-decoration:none;
-  color:#2c7715;
-}
-    
-/* #logout {
-    max-width: 101px;
-    width: 100%;
-    background: #444444;
-    color: #f9f9f9;
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    float: right;
-    cursor: pointer;
-} */
        
 .color-primary{
     color: var(--main-yellow-color);
@@ -175,8 +162,44 @@ a{
     background-color: var(--main-nav-color);
 }
 
+.movie-title-font{
+    font-family: 'Rubik';
+    font-weight: 800;
+}
+
+.movie-desc-font{
+    font-family: 'Rubik';
+    font-size: 1.2rem;
+    color:#d6d6d6;
+}
+
 .main-bg-color{
     background-color: var(--main-bg-color);
+}
+
+.review-bg-color{
+    background-color: var(--main-yellow-bg-color);
+}
+
+.review-text-color-primary{
+    color: var(--main-bg-color);
+}
+
+.review-font-style{
+    font-size: 1.5rem;
+    font-family:'Mukta';
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+
+.review-quote-style{
+    margin-bottom: 20px;
+    color: var(--main-nav-color);
+}
+
+.review-border{
+    border-radius: 1rem!important;
 }
 
 .font-bold {
@@ -186,9 +209,6 @@ a{
 .no-button {
     background: none;
     border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    color: #0d6efd;
     text-decoration: none;
     font-size: 100%;
 }
@@ -199,15 +219,35 @@ a{
 
 .movie-card{
     height:50vh;
+    position: relative;
 }
 
 .movie-img{
+    position: absolute;
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
+.bg-movie-img{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.5;
+     -webkit-filter: blur(2px);
+    filter: blur(2px); 
+}
+
 .homepage-movie-img{
     height: 100%;
     width: 100%;
+}
+
+.review-like-button:hover{
+    color:red;
+    cursor: pointer;
 }

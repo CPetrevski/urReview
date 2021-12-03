@@ -1,23 +1,82 @@
 <div class="container">
     <div class="row">
-        <div class="movie-card py-3">
-            <img src="{{poster}}" class="movie-img" alt="...">
+        <div class="movie-card my-3">
+            <img src="{{poster}}" class="bg-movie-img">
+            <img src="{{poster}}" class="movie-img" alt="image of the selected movie">
         </div>
-        <h1 class="text-white py-4">{{movie_title}}</h1>
-        <h4 class="text-white">{{description}}</h4>
-        <div class="text-center">
-            <button class="btn btn-primary" id="review_id" value="{{id}}" type="submit">Post a Review</button>
+        <h1 class="text-white py-4 movie-title-font"><i class="fas fa-film color-primary"></i> {{movie_title}}</h1>
+        <p class="movie-desc-font fst-italic">Released: {{date_released}}</p>
+        <p class="movie-desc-font">{{description}}</p>
+    </div>
+    {{#if logged_in}}
+
+    {{!-- New Post Button --}}
+    <div class="new-review-div row mb-5">
+        <div class="d-flex justify-content-center">
+            <button type="button" class="new-review-button btn btn-warning btn-lg">+ New Review</button>
         </div>
     </div>
-    <div class="row">
-        <h1 class="text-white">Review</h1>
+
+    {{!-- New Review Form --}}
+    <div class="new-review-form row mb-5">
+        <div class="d-flex justify-content-center">
+            <form class="new-review review-bg-color review-border p-3 m-1 col-6">
+                <div class="mb-3">
+                    <h4 class="form-label review-text-color-primary" for="new-review-content">Leave a review</h4>
+                    <textarea class="form-control" type="text" rows="1" id="new-review-content"></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-secondary" type="submit" data-id="{{id}}" value="post">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {{else}}
+    <div class="row d-flex justify-content-center mb-3">
+        <h4 class="col-6 text-secondary text-center p-3"> <a href="/login">log in</a> to leave a review
+        </h4>
+    </div>
+    {{/if}}
+
+    {{!-- Display list of reviews --}}
+    {{#if reviews.length}}
+    <div class="row mb-5 d-flex justify-content-center">
+        <h4 class="text-white col-8"> <i class="fas fa-comments color-primary"></i> Reviews</h4>
         {{#each reviews as |review| }}
-        <div class="text-white">
-            REVIEW: {{review.review}}<br>
-            DATE: {{format_date review.date_created}}<br>
-            BY: {{review.user.name}}<br>
-            <hr>
+        <div class="new-review review-bg-color review-border py-3 px-4 m-2 col-8">
+            <div class="row">
+                <div class="col-6">By {{review.user.name}}</div>
+                <div class="col-6 text-end">
+                    <i class="fas fa-edit"></i>
+                    <i class="fas fa-trash-alt"></i>
+                    <div>REVIEW ID: {{review.user_id}}</div>
+                    <div>USER ID: {{userId}}</div>
+                    {{#ifCond review.user_id userId}}
+                    {{review.user_id}} is equal to {{userId}}
+                    {{!-- insert edit and delete btn --}}
+                    {{else}}
+                    {{review.user_id}} is not equal to {{userId}}
+                    {{!-- do nothing. --}}
+                    {{/ifCond}}
+                </div>
+            </div>
+            <i class="fas fa-quote-left review-quote-style"></i>
+            <span class="review-text-color-primary review-font-style">{{review.review}}</span>
+            <i class="fas fa-quote-right review-quote-style"></i>
+            <div class="row">
+                <div class="col-6 text-start">
+                    {{!-- <button class="review-like-button no-button" data-id="{{review.likes}}">
+                        <i class="far fa-heart pe-2"></i>{{review.likes}}
+                    </button> --}}
+                </div>
+                <div class="col-6 text-end">{{format_date review.date_created}}</div>
+            </div>
         </div>
         {{/each}}
     </div>
+    {{/if}}
 </div>
+
+
+<script src="/js/movie.js"></script>

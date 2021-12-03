@@ -28,25 +28,22 @@ router.get('/movie/:id', async (req, res) => {
     const movieData = await Movie.findByPk(req.params.id, {
       include: [
         {
-          model: Review
+          model: Review,
+          include: [{
+            model: User,
+            attributes:['name'],
+          }]
         },
-        // Will need to include Comment model when we set up Comment later
-        // {
-        //   model: Comment,
-        //   include: [{
-        //     model: User,
-        //     attributes: ['name'],
-        //   }]
-        // },
       ],
     });
 
     const movie = movieData.get({ plain: true });
-    console.log(JSON.stringify({ movieData }, null, 2)); 
-
+    // console.log(JSON.stringify({ movieData }, null, 2)); 
+    // console.log(req.session.user_id);
     res.render('movie', {
       ...movie,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      userId: req.session.user_id
     });
   } catch (err) {
     console.log(err);
@@ -119,5 +116,5 @@ router.get('/signup', (req, res) => {
 
   res.render('signup');
 });
-s
+
 module.exports = router;
