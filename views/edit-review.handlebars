@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="movie-card">
+            <img src="{{movie.poster}}" class="movie-img py-3" alt="...">
+        </div>
+        <h1 class="text-white py-4">{{movie.movie_title}}</h1>
+    <form class="edit-post">
+  <div class="form-group">
+    <textarea class="form-control" id="edit">{{review}}</textarea>
+    <button type="submit" id="id" data-id={{id}} value="Edit" class="btn btn-secondary active">Edit</button>
+  </div>
+ </form>
+</div>
+<script src="js/edit.js"></script>
