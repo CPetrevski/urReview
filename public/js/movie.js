@@ -4,10 +4,6 @@ const newReviewHandler = async (event) => {
     const review = document.querySelector('#new-review-content').value.trim();
     const movie_id = event.target.getAttribute('data-id');
 
-    console.log(review);
-    console.log(movie_id);
-    console.log(event.target);
-
     if (review) {
         //if there's something in the review, do a POST to create a new article 
         const response = await fetch(`/api/reviews`, {
@@ -28,9 +24,7 @@ const newReviewHandler = async (event) => {
 
 const likeBtnHandler = async (event) => {
     var likes = parseInt(event.target.getAttribute('data-id'));
-    console.log(likes);
     likes++;
-    console.log(likes);
     //Something's not working here
     try {
         const response = await fetch(`/api/reviews/like`, {

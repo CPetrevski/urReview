@@ -48,16 +48,10 @@
             <div class="row">
                 <div class="col-6">By {{review.user.name}}</div>
                 <div class="col-6 text-end">
-                    <i class="fas fa-edit"></i>
+                    {{#ifCond ../userId review.user_id}}
+                    {{!-- will add event listener functions to make these work --}}
+                    <i class="fas fa-edit"></i> 
                     <i class="fas fa-trash-alt"></i>
-                    <div>REVIEW ID: {{review.user_id}}</div>
-                    <div>USER ID: {{userId}}</div>
-                    {{#ifCond review.user_id userId}}
-                    {{review.user_id}} is equal to {{userId}}
-                    {{!-- insert edit and delete btn --}}
-                    {{else}}
-                    {{review.user_id}} is not equal to {{userId}}
-                    {{!-- do nothing. --}}
                     {{/ifCond}}
                 </div>
             </div>

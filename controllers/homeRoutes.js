@@ -39,7 +39,6 @@ router.get('/movie/:id', async (req, res) => {
 
     const movie = movieData.get({ plain: true });
     // console.log(JSON.stringify({ movieData }, null, 2)); 
-    // console.log(req.session.user_id);
     res.render('movie', {
       ...movie,
       logged_in: req.session.logged_in,
