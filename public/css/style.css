@@ -260,3 +260,7 @@ a:hover{
     cursor: pointer;
     color:red;
 }
+
+.footer-github-link{
+    color:#6c757d;
+}
