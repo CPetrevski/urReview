@@ -55,9 +55,21 @@
   {{!-- Body --}}
   {{{ body }}}
   {{!-- Footer --}}
-  {{!-- <div class="container-fluid nav-bg-color h-10">
-    Contact us: @Chris @Gastavo @Shao
-  </div> --}}
+  <div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+
+      <span class="text-muted">© 2021 urReview Company, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><span class="footer-github-link">Github |</span></li>
+      <li class="ms-3"><a class="footer-github-link" href="https://github.com/CPetrevski"><i class="fab fa-github"> Chris </i></a></li>
+      <li class="ms-3"><a class="footer-github-link" href="https://github.com/gugacorchog"><i class="fab fa-github"> Gastavo </i></a></li>
+      <li class="ms-3"><a class="footer-github-link" href="https://github.com/shaotangyen"><i class="fab fa-github"> Shao </i></a></li>
+    </ul>
+  </footer>
+</div>
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

@@ -12,13 +12,16 @@ const newPostHandler = async (event) => {
                 'Content-Type': 'application/json',
             },
         });
-        //if success, redirect to dashboard
+        //if success, redirect to the previous page
         if (response.ok) {
             //document.location.replace(`/profile`);
             document.location.replace(localStorage.getItem("prevUrl"));
         } else {
             alert('Failed to update Review');
         }
+    } else if (event.target.value == "cancel") {
+        // if cancel button is clicked, redirect to the previous page
+        document.location.replace(localStorage.getItem("prevUrl"));
     }
 };
 document

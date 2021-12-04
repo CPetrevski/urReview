@@ -1,24 +1,28 @@
 const newReviewHandler = async (event) => {
     event.preventDefault();
+    if (event.target.value == "post") {
+        const review = document.querySelector('#new-review-content').value.trim();
+        const movie_id = event.target.getAttribute('data-id');
 
-    const review = document.querySelector('#new-review-content').value.trim();
-    const movie_id = event.target.getAttribute('data-id');
-
-    if (review) {
-        //if there's something in the review, do a POST to create a new article 
-        const response = await fetch(`/api/reviews`, {
-            method: 'POST',
-            body: JSON.stringify({ review, movie_id }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-        //if success, redirect to dashboard
-        if (response.ok) {
-            document.location.replace(`/movie/${movie_id}`);
-        } else {
-            alert('Failed to create article');
+        if (review) {
+            //if there's something in the review, do a POST to create a new article 
+            const response = await fetch(`/api/reviews`, {
+                method: 'POST',
+                body: JSON.stringify({ review, movie_id }),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            //if success, redirect to dashboard
+            if (response.ok) {
+                document.location.replace(`/movie/${movie_id}`);
+            } else {
+                alert('Failed to create article');
+            }
         }
+    } else if (event.target.value == "cancel") {
+        document.querySelector(".new-review-form").style.display = "none";
+        document.querySelector(".new-review-div").style.display = "block";
     }
 };
 
@@ -26,7 +30,7 @@ const reviewToolHandler = async (event) => {
 
     if (event.target.getAttribute('value') == "edit") {
         const id = event.target.getAttribute('data-id');
-        
+
         //save current URL for when edit is done
         localStorage.setItem("prevUrl", window.location.href);
 
