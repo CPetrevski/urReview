@@ -1,4 +1,5 @@
 <div class="container">
+    {{!-- Movie poaster, title, ifo --}}
     <div class="row">
         <div class="movie-card my-3">
             <img src="{{poster}}" class="bg-movie-img">
@@ -41,17 +42,17 @@
 
     {{!-- Display list of reviews --}}
     {{#if reviews.length}}
-    <div class="row mb-5 d-flex justify-content-center">
+    <div class="row review-tool mb-5 d-flex justify-content-center">
         <h4 class="text-white col-8"> <i class="fas fa-comments color-primary"></i> Reviews</h4>
         {{#each reviews as |review| }}
         <div class="new-review review-bg-color review-border py-3 px-4 m-2 col-8">
             <div class="row">
                 <div class="col-6">By {{review.user.name}}</div>
-                <div class="col-6 text-end">
+                <div class="col-6 text-end review-tool">
                     {{#ifCond ../userId review.user_id}}
-                    {{!-- will add event listener functions to make these work --}}
-                    <i class="fas fa-edit"></i> 
-                    <i class="fas fa-trash-alt"></i>
+                    {{!-- Show Edit and Delete buttons if the review is written by the logged in user --}}
+                    <i class="fas fa-edit edit-btn p-1" data-id={{review.id}} value="edit"></i>
+                    <i class="fas fa-trash-alt delete-btn p-1" data-id={{review.id}} value="delete"></i>
                     {{/ifCond}}
                 </div>
             </div>
@@ -60,6 +61,7 @@
             <i class="fas fa-quote-right review-quote-style"></i>
             <div class="row">
                 <div class="col-6 text-start">
+                    {{!-- DO not have time to do the Like function --}}
                     {{!-- <button class="review-like-button no-button" data-id="{{review.likes}}">
                         <i class="far fa-heart pe-2"></i>{{review.likes}}
                     </button> --}}

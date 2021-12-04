@@ -22,25 +22,56 @@ const newReviewHandler = async (event) => {
     }
 };
 
-const likeBtnHandler = async (event) => {
-    var likes = parseInt(event.target.getAttribute('data-id'));
-    likes++;
-    //Something's not working here
-    try {
-        const response = await fetch(`/api/reviews/like`, {
-            method: 'PUT',
-            body: JSON.stringify({ likes }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-    } catch (err) {
-        console.log(err);
+const reviewToolHandler = async (event) => {
+
+    if (event.target.getAttribute('value') == "edit") {
+        const id = event.target.getAttribute('data-id');
+        
+        //save current URL for when edit is done
+        localStorage.setItem("prevUrl", window.location.href);
+
+        //call the /review/ID/edit API to continue edit
+        document.location.replace(`/review/${id}/edit`);
+
+    } else if (event.target.getAttribute('value') == "delete") {
+
+        if (confirm("Confirm to delete the review?")) {
+            const id = event.target.getAttribute('data-id');
+
+            const response = await fetch(`/api/reviews/${id}`, {
+                method: 'DELETE',
+            });
+
+            //if success, reload the page
+            if (response.ok) {
+                document.location.reload();
+            } else {
+                alert('Failed to delete the review');
+            }
+        }
     }
+
 }
 
+// const likeBtnHandler = async (event) => {
+//     var likes = parseInt(event.target.getAttribute('data-id'));
+//     likes++;
+//     //Something's not working here
+//     try {
+//         const response = await fetch(`/api/reviews/like`, {
+//             method: 'PUT',
+//             body: JSON.stringify({ likes }),
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//         });
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
+
 //to hide the new post button and show the post form
-const newPostBtnHandler = (event) => {
+const newReviewBtnHandler = (event) => {
     document.querySelector(".new-review-form").style.display = "block";
     document.querySelector(".new-review-div").style.display = "none";
 }
@@ -57,7 +88,11 @@ document
 
 document
     .querySelector('.new-review-button')
-    .addEventListener('click', newPostBtnHandler);
+    .addEventListener('click', newReviewBtnHandler);
+
+document
+    .querySelector('.review-tool')
+    .addEventListener('click', reviewToolHandler);
 
 // document
 //     .querySelector('.review-like-button')
