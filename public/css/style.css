@@ -251,3 +251,12 @@ a:hover{
     color:red;
     cursor: pointer;
 }
+
+.edit-btn{
+    cursor: pointer;
+}
+
+.delete-btn{
+    cursor: pointer;
+    color:red;
+}

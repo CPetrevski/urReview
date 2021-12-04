@@ -53,16 +53,14 @@ router.get('/movie/:id', async (req, res) => {
 router.get('/review/:id/edit', async (req, res) => {
   try {
     const reviewData = await Review.findByPk(req.params.id, {
-      include: [
-        {
-          model: User
-        },
-      ],
+      include: [{
+        model: Movie,
+      }]
     });
     console.log(JSON.stringify({ reviewData }, null, 2));
     const review = reviewData.get({ plain: true });
 
-    res.render('editReview', {
+    res.render('edit-review', {
       ...review,
       logged_in: req.session.logged_in
     });

@@ -1,14 +1,27 @@
 <div class="container">
-    <div class="row">
-        <div class="movie-card">
-            <img src="{{movie.poster}}" class="movie-img py-3" alt="...">
-        </div>
-        <h1 class="text-white py-4">{{movie.movie_title}}</h1>
-    <form class="edit-post">
-  <div class="form-group">
-    <textarea class="form-control" id="edit">{{review}}</textarea>
-    <button type="submit" id="id" data-id={{id}} value="Edit" class="btn btn-secondary active">Edit</button>
+  {{!-- Movie poaster, title, ifo --}}
+  <div class="row">
+    <div class="movie-card my-3">
+      <img src="{{movie.poster}}" class="bg-movie-img">
+      <img src="{{movie.poster}}" class="movie-img" alt="image of the selected movie">
+    </div>
+    <h1 class="text-white py-4 movie-title-font"><i class="fas fa-film color-primary"></i> {{movie.movie_title}}</h1>
+    <p class="movie-desc-font fst-italic">Released: {{movie.date_released}}</p>
+    <p class="movie-desc-font">{{movie.description}}</p>
   </div>
- </form>
-</div>
-<script src="js/edit.js"></script>
+  {{!-- Editing --}}
+  <div class="row review-tool mb-5 d-flex justify-content-center">
+    <h4 class="text-white col-8"> <i class="fas fa-edit color-primary"></i> Edit Review</h4>
+    <div class="new-review review-bg-color review-border py-3 px-4 m-2 col-8">
+      <form class="edit-post">
+        <div class="form-group">
+          <textarea class="form-control mb-3" id="edit">{{review}}</textarea>
+          <div class="text-center">
+            <button type="submit" id="id" data-id={{id}} value="Edit" class="btn btn-secondary active">Edit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/edit.js"></script>

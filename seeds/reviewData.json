@@ -12,25 +12,25 @@
         "user_id":2
     },
     {
-        "review": "I love it!",
+        "review": "I don't like it. The acting is terrible.",
         "likes": 20,
         "movie_id":3,
         "user_id":3
     },
     {
-        "review": "It's an amazing series.",
+        "review": "This is a master piece.",
         "likes": 563,
         "movie_id":2,
         "user_id":4
     },
     {
-        "review": "I love it!",
+        "review": "I cried 8 times! Highly recommended",
         "likes": 20,
         "movie_id":3,
         "user_id":1
     },
     {
-        "review": "It's an amazing series.",
+        "review": "I can't wait for its next season.",
         "likes": 563,
         "movie_id":2,
         "user_id":2
