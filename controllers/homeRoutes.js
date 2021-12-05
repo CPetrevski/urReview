@@ -6,12 +6,10 @@ router.get('/', async (req, res) => {
   try {
     // Get all articles and JOIN with user data
     const movieData = await Movie.findAll(
-      { include: [{ model: Review }] }
+      { attributes: ['id', 'poster'] }
     );
-    // console.log (movieData)
-    // console.log(JSON.stringify({ movieData }, null, 2)); //for testing
     const movies = movieData.map((movie) => movie.get({ plain: true }));
-    // console.log (movies) 
+    //console.log(JSON.stringify({ movies }, null, 2)); //for testing
     res.render('homepage', {
       movies,
       logged_in: req.session.logged_in

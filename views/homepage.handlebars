@@ -1,8 +1,32 @@
 <!-- Loop over each object in the projects array -->
 <div class="container">
-  <div class="row row-cols-4">
-    {{#each movies as |movie| }}
-    <a href="/movie/{{movie.id}}" ><img src="{{movie.poster}}" class="homepage-movie-img py-3" alt="..."></a>
-    {{/each}}
+  {{!-- <div class="row row-cols-4"> --}}
+    <div class="row">
+      {{#each movies as |movie| }}
+
+      {{#ifCond movie.id 1}}
+      {{!-- if it's the first movie in the list, make it a carousell size banner --}}
+      <div class="col-12">
+        <a href="/movie/{{movie.id}}">
+          <div class="movie-card my-5 my-5">
+            <img src="{{movie.poster}}" class="bg-movie-img">
+            <img src="{{movie.poster}}" class="movie-img" alt="image of the selected movie">
+          </div>
+        </a>
+      </div>
+      {{!-- Site logo and description --}}
+      {{!-- <div class="col-12 mb-3">
+        <h2 class="font-bold text-white text-center"><span class="color-primary">ur</span>Review</h2>
+        <p class="text-white text-center">You best movie review website</p>
+      </div> --}}
+      {{else}}
+      {{!-- otherwise, list them out --}}
+      <div class="col-12 col-md-3 col-sm-6">
+        <a href="/movie/{{movie.id}}"><img src="{{movie.poster}}" class="homepage-movie-img py-3" alt="..."></a>
+      </div>
+      
+      {{/ifCond}}
+
+      {{/each}}
+    </div>
   </div>
-</div>
