@@ -1,18 +1,31 @@
+<div class="container">
 {{#if reviews.length}}
-  <section class="card">
-    <div class="card-header">Your Reviews</div>
-    <div class="post-body">
-      {{#each reviews}}        
-          <li>
-            <div>{{format_date date_created}}</div>
-            <div>{{review}}</div>
-          </li>        
-      {{/each}}
+    <div class="row review-tool mb-5 d-flex justify-content-center">
+        <h4 class="text-white col-8 my-3"> <i class="fas fa-comments color-primary"></i> Your Reviews</h4>
+        {{#each reviews as |review| }}
+        <div class="new-review review-bg-color review-border py-3 px-4 m-2 col-8">
+            <div class="row">
+                <div class="col-6">By {{review.user.name}}</div>
+                <div class="col-6 text-end review-tool">
+
+                    {{!-- Show Edit and Delete buttons if the review is written by the logged in user --}}
+                    <i class="fas fa-edit edit-btn p-1" data-id={{review.id}} value="edit"></i>
+                    <i class="fas fa-trash-alt delete-btn p-1" data-id={{review.id}} value="delete"></i>
+
+                </div>
+            </div>
+            <i class="fas fa-quote-left review-quote-style"></i>
+            <span class="review-text-color-primary review-font-style">{{review.review}}</span>
+            <i class="fas fa-quote-right review-quote-style"></i>
+            <div class="row">
+                <div class="col-6 text-start">
+                </div>
+                <div class="col-6 text-end">{{format_date review.date_created}}</div>
+            </div>
+        </div>
+        {{/each}}
     </div>
-  </section>
-{{/if}}
+    {{/if}}
+</div>
 
-
-{{#if logged_in}}
-  <script src="/js/profile.js"></script>
-{{/if}}
+<script src="/js/profile.js"></script>
