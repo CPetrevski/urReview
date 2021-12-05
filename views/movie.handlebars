@@ -44,9 +44,9 @@
     {{!-- Display list of reviews --}}
     {{#if reviews.length}}
     <div class="row review-tool mb-5 d-flex justify-content-center">
-        <h4 class="text-white col-8"> <i class="fas fa-comments color-primary"></i> Reviews</h4>
+        <h4 class="text-white col-10 col-md-8 col-sm-10"> <i class="fas fa-comments color-primary"></i> Reviews</h4>
         {{#each reviews as |review| }}
-        <div class="new-review review-bg-color review-border py-3 px-4 m-2 col-8">
+        <div class="new-review review-bg-color review-border py-3 px-4 m-2 col-10 col-md-8 col-sm-10">
             <div class="row">
                 <div class="col-6">By {{review.user.name}}</div>
                 <div class="col-6 text-end review-tool">
