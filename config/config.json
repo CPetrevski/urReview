@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "Cpetrevski1",
+        "password": "",
         "database": "urReview_db",
         "host": "172.0.0.1",
         "dialect": "mysql"
