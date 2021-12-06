@@ -11,7 +11,7 @@
     
 ### Demo
 
-![Demo](https://drive.google.com/file/d/1qwCFm9nhZfmkQE7SzHlBVNLxozuBYdXy/view?usp=sharing)
+<a href="https://drive.google.com/file/d/1qwCFm9nhZfmkQE7SzHlBVNLxozuBYdXy/view?usp=sharing">Demo</a>
 
 Screenshot:
 
