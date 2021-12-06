@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "GROUP PROJECT 2 - Full Stack Application",
   "main": "server.js",
+  "engines": {
+    "node": "14.18.0"
+  },
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,8 +31,7 @@
     "express-handlebars": "^6.0.1",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.12.0-alpha.1",
-    "eslint": "^8.3.0"
+    "sequelize": "^6.12.0-alpha.1"
   },
   "devDependencies": {
     "eslint": "^8.3.0"
