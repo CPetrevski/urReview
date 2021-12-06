@@ -19,14 +19,18 @@ Screenshot:
 
 ![screenshot]()
 
+![screenshot]()
+
 
 
 ## Description 
 
+#### THE review list is availible for all users
+#### AND they are able to see the list of movies and reviews 
+#### TO write a review 
 #### THE user first need to singn up
-#### AND login to acess the list of Movies Reviews
-#### THE user will be able to see the other users Reviews
-#### AND like or dislike the previus Reviews
+#### AND login to be able to whrite or edit only your own Reviews
+#### WHEN logged in the user can access your list of reviews on your profile
 #### THE user can ADD NEW Reviews and Delete just your own Reviews
 
 
@@ -35,38 +39,44 @@ Screenshot:
 - [Installation](#installation)
 - [Technologies](#Technologies)
 - [Contributing](#contributing)
-- [Test](#test)
 - [Question](#question) 
  
 
 ## Installation
 
 #### Npm i
-#### express.js
+#### express.j
 #### handlebars.js
 #### mysql2
-
+#### bcrypt
+#### connect-session-sequelize
+#### dotenv
+#### express-handlebars
+#### express-session
+#### sequelize
 
 ## Technologies
 
-#### node.js
-#### express.js
-#### handlebars.js
-#### mysql
-#### ORM 
+#### bcrypt: 5.0.1
+#### connect-session-sequelize: 7.1.2
+#### dotenv: 10.0.0
+#### express: 4.17.1
+#### express-handlebars: 6.0.1
+#### express-session: 1.17.2
+#### mysql2: 2.3.3
+#### sequelize: 6.12.0-alpha.1
+  
 
 ## Contributing
 ##### Chris Petrevski 
 ##### Gustavo Corchog 
 ##### Shao Tangyen
 
-## Test
-#### Demo
-
-
 
 ## Question
 Questions? Let us know:  [gugacorchog@gmail.com]
+                         [c_petrevski@hotmail.com]
+                         [shaotang.yen@gmail.com]
 
 ## ADD US ON GITHUB 
 [https://github.com/gugacorchog]
