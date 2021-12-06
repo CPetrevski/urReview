@@ -74,11 +74,13 @@ Screenshot:
 
 
 ## Question
-Questions? Let us know:  [Gustavo Vas](mailto:gugacorchog@gmail.com)
-                         [Chris Petrevski](mailto:c_petrevski@hotmail.com)
-                         [Shao Tangyen](mailto:shaotang.yen@gmail.com)
+Questions? Let us know:  
+
+#### [Gustavo Vas](mailto:gugacorchog@gmail.com)
+#### [Chris Petrevski](mailto:c_petrevski@hotmail.com)
+#### [Shao Tangyen](mailto:shaotang.yen@gmail.com)
 
 ## ADD US ON GITHUB 
-[https://github.com/gugacorchog]
-[https://github.com/CPetrevski/]
-[https://github.com/shaotangyen]
+#### [Gustavo Vas](https://github.com/gugacorchog)
+#### [Chris Petrevski](https://github.com/CPetrevski/)
+#### [Shao Tangyen](https://github.com/shaotangyen)
