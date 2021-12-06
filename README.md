@@ -78,9 +78,9 @@ Questions? Let us know:
 
 #### [Gustavo Vas](mailto:gugacorchog@gmail.com)
 #### [Chris Petrevski](mailto:c_petrevski@hotmail.com)
-#### [Shao Tangyen](mailto:shaotang.yen@gmail.com)
+#### [Shao Tang Yen](mailto:shaotang.yen@gmail.com)
 
 ## ADD US ON GITHUB 
 #### [Gustavo Vas](https://github.com/gugacorchog)
 #### [Chris Petrevski](https://github.com/CPetrevski/)
-#### [Shao Tangyen](https://github.com/shaotangyen)
+#### [Shao Tang Yen](https://github.com/shaotangyen)
