@@ -15,11 +15,11 @@
 
 Screenshot:
 
-![screenshot]()
+![screenshot](https://github.com/CPetrevski/urReview/blob/main/assets/images/Homepage.jpg)
 
-![screenshot]()
+![screenshot](https://github.com/CPetrevski/urReview/blob/main/assets/images/Login.jpg)
 
-![screenshot]()
+![screenshot](https://github.com/CPetrevski/urReview/blob/main/assets/images/Profile.jpg)
 
 
 
