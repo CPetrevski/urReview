@@ -264,3 +264,32 @@ a:hover{
 .footer-github-link{
     color:#6c757d;
 }
+
+@media screen and (max-width: 986px) {
+    .register-info-box{
+        width:40%;
+    }
+    .login-info-box{
+        width:40%;
+    }
+    .login-reg-panel #label-login, .login-reg-panel #label-register{
+        width:95%;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* comes into effect for screens less than or equal to 320 pixels */
+    .login-reg-panel {
+      width: 100%;
+    }
+    .register-info-box{
+        width:30%;
+        padding:0;
+    }
+    .login-info-box{
+        width:30%;
+        padding:0 10px;
+    }
+    .login-show, .register-show{
+        padding:20%;
+    }
+  }
