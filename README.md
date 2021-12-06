@@ -76,7 +76,7 @@ Screenshot:
 ## Question
 Questions? Let us know:  [Gustavo Vas](mailto:gugacorchog@gmail.com)
                          [Chris Petrevski](mailto:c_petrevski@hotmail.com)
-                         [Shao](mailto:shaotang.yen@gmail.com)
+                         [Shao Tangyen](mailto:shaotang.yen@gmail.com)
 
 ## ADD US ON GITHUB 
 [https://github.com/gugacorchog]
